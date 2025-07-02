@@ -1,7 +1,7 @@
 import * as sdk from "node-appwrite";
 
 export const {
-  NEXT_PUBLIC_ENDPOINT: ENDPOINT,
+  NEXT_PUBLIC_APPWRITE_ENDPOINT: ENDPOINT,
   PROJECT_ID,
   API_KEY,
   DATABASE_ID,
