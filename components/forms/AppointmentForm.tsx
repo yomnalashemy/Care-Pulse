@@ -14,7 +14,7 @@ import {
   updateAppointment,
 } from "@/lib/actions/appointment.actions";
 import { getAppointmentSchema } from "@/lib/validation";
-import {Appointment} from "@/types/appwrite.types";
+import { Appointment } from "@/types/appwrite.types";
 
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -101,7 +101,6 @@ export const AppointmentForm = ({
             cancellationReason: values.cancellationReason,
           },
           type,
-          timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone, 
         };
 
         const updatedAppointment = await updateAppointment(appointmentToUpdate);
