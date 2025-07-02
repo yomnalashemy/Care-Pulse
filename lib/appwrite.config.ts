@@ -1,5 +1,6 @@
 import * as sdk from "node-appwrite";
 import { ID } from "node-appwrite";
+import { revalidatePath } from "next/cache";
 
 export const {
   NEXT_PUBLIC_APPWRITE_ENDPOINT: ENDPOINT,
