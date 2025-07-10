@@ -1,5 +1,7 @@
 "use client";
+
 import { useEffect, useState } from "react";
+
 import { PasskeyModal } from "./PasskeyModal";
 
 export default function AdminGate({ children }: { children: React.ReactNode }) {

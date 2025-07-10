@@ -1,6 +1,6 @@
+import { redirect } from "next/navigation";
 import { PatientForm } from "@/components/forms/PatientForm";
 import { getPatient } from "@/lib/actions/patient.actions";
-import { redirect } from "next/navigation";
 
 export default async function RegisterPage({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
   // If you have a way to get the current user (e.g., from cookies/session), do it here
