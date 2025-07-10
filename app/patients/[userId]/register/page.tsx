@@ -1,8 +1,9 @@
-import { redirect } from "next/navigation";
-import RegisterForm from "@/components/forms/RegisterForm";
-import { getPatient } from "@/lib/actions/patient.actions";
 import Link from "next/link";
 import Image from "next/image";
+import { redirect } from "next/navigation";
+
+import RegisterForm from "@/components/forms/RegisterForm";
+import { getPatient } from "@/lib/actions/patient.actions";
 
 interface SearchParamProps {
   searchParams: { [key: string]: string | string[] | undefined }
