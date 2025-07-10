@@ -1,14 +1,11 @@
-import Image from "next/image"
-import Link from "next/link"
-import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
-
-import { StatCard } from "@/components/StatCard"
-import { columns } from "@/components/table/columns"
-import { DataTable } from "@/components/table/DataTable"
-import { getRecentAppointmentList } from "@/lib/actions/appointment.actions"
-import { PasskeyModal } from "@/components/PasskeyModal";
 import AdminGate from "@/components/AdminGate";
+import Image from "next/image";
+import Link from "next/link";
+
+import { StatCard } from "@/components/StatCard";
+import { columns } from "@/components/table/columns";
+import { DataTable } from "@/components/table/DataTable";
+import { getRecentAppointmentList } from "@/lib/actions/appointment.actions";
 
 const AdminPage = async () => {
   const data = (await getRecentAppointmentList()) || {

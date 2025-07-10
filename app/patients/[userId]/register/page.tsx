@@ -1,13 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
 
+import { redirect } from "next/navigation";
 import RegisterForm from "@/components/forms/RegisterForm";
 import { getPatient } from "@/lib/actions/patient.actions";
-import { redirect } from "next/navigation";
-import { PasskeyModal } from "@/components/PasskeyModal"
 
 interface SearchParamProps {
   searchParams: { [key: string]: string | string[] | undefined }
+  params: { [key: string]: string }
 }
 
 const Register = async ({ params, searchParams }: SearchParamProps) => {
@@ -18,10 +18,8 @@ const Register = async ({ params, searchParams }: SearchParamProps) => {
   if (patient) {
     redirect(`/patients/${userId}/new-appointment`); // or dashboard if you have one
   }
-
   return (
     <div className="flex h-screen max-h-screen">
-      {isAdmin && <PasskeyModal />}
       <section className="remove-scrollbar container my-auto">
         <div className="sub-container max-w-[496px]">
           <Image
