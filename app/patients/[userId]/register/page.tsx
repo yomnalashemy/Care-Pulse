@@ -1,9 +1,8 @@
-import Image from "next/image"
-import Link from "next/link"
-
 import { redirect } from "next/navigation";
 import RegisterForm from "@/components/forms/RegisterForm";
 import { getPatient } from "@/lib/actions/patient.actions";
+import Link from "next/link";
+import Image from "next/image";
 
 interface SearchParamProps {
   searchParams: { [key: string]: string | string[] | undefined }
@@ -11,7 +10,6 @@ interface SearchParamProps {
 }
 
 const Register = async ({ params, searchParams }: SearchParamProps) => {
-  const isAdmin = searchParams?.admin === "true";
   const userId = params.userId;
   // Check if patient already exists
   const patient = await getPatient(userId);
