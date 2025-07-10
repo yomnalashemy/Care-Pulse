@@ -225,7 +225,7 @@ const LandingPage = () => {
                 height={32}
                 width={162}
                 alt="CarePluse"
-                className="h-6 w-fit filter brightness-0 invert"
+                className="w-fit h-6 brightness-0 invert"
               />
             </div>
             <div className="text-gray-400">© 2024 CarePluse. Transforming healthcare, one patient at a time.</div>
